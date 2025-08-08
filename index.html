@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>AJo's Life - Breaking down life into 138109 smaller tasks</title>
+    <meta name="description" content="A mindful approach to life - breaking down AJo's overwhelming existence into 138109 smaller tasks to make it seem less scary and ez 2 tackle." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        --font-serif: "Crimson Text", Georgia, "Times New Roman", serif;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        font-feature-settings: "rlig" 1, "calt" 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .script-font {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .animate-spin-slow {
+        animation: spin 20s linear infinite;
+      }
+
+      @keyframes float {
+        0%, 100% { 
+          transform: translateY(0px) rotate(0deg); 
+        }
+        25% { 
+          transform: translateY(-10px) rotate(90deg); 
+        }
+        50% { 
+          transform: translateY(-5px) rotate(180deg); 
+        }
+        75% { 
+          transform: translateY(-15px) rotate(270deg); 
+        }
+      }
+
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'serif': ['Crimson Text', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white">
+    <div class="min-h-screen bg-white">
+      <!-- Header -->
+      <header class="pt-16 pb-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-12 flex justify-center">
+            <!-- Animated Sun -->
+            <div class="relative">
+              <div class="w-24 h-24 border-2 border-gray-900 rounded-full animate-float">
+                <div class="absolute inset-2 border border-gray-400 rounded-full animate-spin-slow">
+                  <div class="absolute top-1/2 left-1/2 w-2 h-2 bg-gray-900 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                  <div class="absolute top-2 left-1/2 w-1 h-3 bg-gray-600 transform -translate-x-1/2"></div>
+                  <div class="absolute bottom-2 left-1/2 w-1 h-3 bg-gray-600 transform -translate-x-1/2"></div>
+                  <div class="absolute top-1/2 left-2 w-3 h-1 bg-gray-600 transform -translate-y-1/2"></div>
+                  <div class="absolute top-1/2 right-2 w-3 h-1 bg-gray-600 transform -translate-y-1/2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-light mb-8 leading-tight text-gray-900">
+            Breaking down AJo's life into
+            <span class="font-medium">138109</span> smaller tasks
+            <br />
+            to make it seem less <span class="script-font">scary</span>
+            <br />
+            and <span class="script-font">ez 2 tackle</span>
+          </h1>
+
+          <p class="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+            A mindful approach to productivity, one intentional task at a time.
+          </p>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="max-w-4xl mx-auto px-4 pb-16">
+        <!-- About Section -->
+        <section class="mb-16">
+          <div class="border-0 bg-gray-50 rounded-lg p-12">
+            <h2 class="text-3xl font-light mb-6 text-gray-900">
+              Hello, I should design
+            </h2>
+            <p class="text-xl text-gray-700 leading-relaxed mb-6">
+              life paradigms that embody <span class="script-font">wisdom</span>
+              and feel <span class="script-font">natural</span>
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              On my journey, I've learned to break down overwhelming life into 
+              manageable pieces. Every task is a step toward clarity, every completion 
+              a moment of mindful progress.
+            </p>
+          </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="mb-16">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="border-0 bg-white shadow-sm rounded-lg p-8">
+              <h3 class="text-2xl font-light mb-4 text-gray-900">
+                Breaking it down
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Life feels less scary when we see it as a collection of small, 
+                achievable tasks. Each one conquered builds momentum for the next.
+              </p>
+            </div>
+
+            <div class="border-0 bg-white shadow-sm rounded-lg p-8">
+              <h3 class="text-2xl font-light mb-4 text-gray-900">
+                Mindful progress
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Progress isn't about speed—it's about intention. Each task completed 
+                with purpose adds up to meaningful change.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Current Focus -->
+        <section class="mb-16">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-light text-gray-900 mb-4">
+              Current focus areas
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              The 138109 tasks that make up AJo's life, organized by intention
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-6">
+              <div class="text-4xl mb-4">🎯</div>
+              <h3 class="text-xl font-medium text-gray-900 mb-2">Personal Growth</h3>
+              <p class="text-gray-600">Building habits that nurture mind and body</p>
+            </div>
+
+            <div class="text-center p-6">
+              <div class="text-4xl mb-4">🛠️</div>
+              <h3 class="text-xl font-medium text-gray-900 mb-2">Creative Work</h3>
+              <p class="text-gray-600">Projects that bring ideas to life</p>
+            </div>
+
+            <div class="text-center p-6">
+              <div class="text-4xl mb-4">🌱</div>
+              <h3 class="text-xl font-medium text-gray-900 mb-2">Learning</h3>
+              <p class="text-gray-600">Continuous growth through curiosity</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="text-center">
+          <div class="border-0 bg-gray-900 text-white rounded-lg p-12">
+            <h2 class="text-3xl font-light mb-6">
+              Get in touch
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+              Let's break down big ideas into <span class="script-font">manageable</span> pieces
+            </p>
+            <button class="bg-transparent border border-white text-white hover:bg-white hover:text-gray-900 transition-colors px-8 py-3 text-lg rounded-lg">
+              Start a conversation ⟢
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="border-t border-gray-200 py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-gray-500 text-sm">
+            Built with <span class="script-font">intention</span> •
+            Inspired by the <span class="script-font">natural</span> flow of productivity
+          </p>
+          <p class="text-gray-400 text-xs mt-2">
+            Design inspired by bradleyziffer.com
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
