@@ -96,8 +96,8 @@
         }
 
         .profile-photo {
-            width: 120px;
-            height: 120px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 2rem;
@@ -112,8 +112,8 @@
 
         @media (min-width: 1024px) {
             .profile-photo {
-                width: 150px;
-                height: 150px;
+                width: 220px;
+                height: 220px;
             }
         }
 
@@ -255,20 +255,62 @@
             margin-bottom: 1rem;
         }
 
-        .education-quote {
-            font-size: 1.125rem;
+        .education-content {
             color: var(--muted-foreground);
-            font-weight: 300;
-            font-style: italic;
-            line-height: 1.7;
-            border-left: 2px solid var(--accent);
-            padding-left: 1.5rem;
+            line-height: 1.6;
         }
 
-        @media (min-width: 1024px) {
-            .education-quote {
-                font-size: 1.25rem;
-            }
+        .education-degree {
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-details {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .education-gpa {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Volunteering Section */
+        .volunteering-content {
+            margin-bottom: 2rem;
+        }
+
+        .volunteering-description {
+            font-size: 1.125rem;
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: var(--muted);
+            border: 2px dashed var(--border);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        .image-placeholder:hover {
+            border-color: var(--accent);
+            background: rgba(22, 163, 74, 0.05);
         }
 
         /* Contact Section */
@@ -397,13 +439,13 @@
     <div class="container">
         <!-- Header Section -->
         <header class="header">
-            <img src="AJ2.jpeg" alt="Arya's profile photo" class="profile-photo" data-testid="profile-photo">
+            <img src="profile-photo.jpg" alt="Arya's profile photo" class="profile-photo" data-testid="profile-photo">
             <h1 class="main-heading" data-testid="main-heading">
                 Hello, I am <span class="name">Arya</span>
             </h1>
             <p class="intro-text" data-testid="intro-text">
                 I am an Architect by degree, ex-consultant currently in product. I am also trained in 
-                <span class="accent-text">Bharatnatyam and Carnatic music</span> for over 14 years.
+                Bharatnatyam and Carnatic music for over 14 years.
             </p>
         </header>
 
@@ -481,29 +523,93 @@
             </div>
         </section>
 
-        <!-- Academics Section -->
-        <section class="section" data-testid="academics-section">
+        <!-- Education Section -->
+        <section class="section" data-testid="education-section">
             <div class="section-header">
-                <h2 class="section-title" data-testid="academics-heading">Academics</h2>
+                <h2 class="section-title" data-testid="education-heading">Education</h2>
                 <div class="section-divider"></div>
             </div>
             
-            <div class="card" data-testid="barch-card">
-                <h3 class="education-title" data-testid="education-title-b.arch-iit-kharagpur">B.Arch IIT Kharagpur</h3>
-                <blockquote class="education-quote">
-                    <p data-testid="education-quote-b.arch-iit-kharagpur">
-                        "Life feels less scary when we see it as a collection of small, achievable tasks. Each one conquered builds momentum for the next."
-                    </p>
-                </blockquote>
+            <div class="card" data-testid="iit-kharagpur-card">
+                <h3 class="education-title" data-testid="education-title-iit-kharagpur">Indian Institute of Technology, Kharagpur</h3>
+                <div class="education-content">
+                    <p class="education-degree" data-testid="education-degree">Bachelor of Architecture and Regional Planning</p>
+                    <p class="education-details" data-testid="education-details">Minor in Economics and Micro Specialization in Entrepreneurship and Innovation</p>
+                    <p class="education-gpa" data-testid="education-gpa">CGPA: 8.27/10</p>
+                    <p class="education-details" data-testid="education-duration">[Jun '18 - Jun '23]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards and Achievements Section -->
+        <section class="section" data-testid="awards-section">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="awards-heading">Awards and Achievements</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="card" data-testid="hudco-award-card">
+                <h3 class="education-title" data-testid="award-title-hudco">HUDCO Awards 2022 | Ministry of Housing and Urban Affairs | First Position</h3>
+                <div class="education-content">
+                    <p class="education-details" data-testid="award-details-hudco">Raised funds from Sir Satya Sai and Tata Trust to successfully build 59 low-cost affordable houses at a budget of INR 3.54 Cr</p>
+                    <p class="education-details" data-testid="award-details-hudco-2">Orchestrated rehabilitation of 240+ residents affected in 2018 Kerala Floods; secured first by winning against 53+ national firms</p>
+                    <p class="education-details" data-testid="award-duration-hudco">[Jan '22]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Positions of Responsibilities Section -->
+        <section class="section" data-testid="positions-section">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="positions-heading">Positions of Responsibilities</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="card" data-testid="governor-card">
+                <h3 class="education-title" data-testid="position-title-governor">Governor | Western Technology Music Society | IIT Kharagpur</h3>
+                <div class="education-content">
+                    <p class="education-details" data-testid="position-details-governor">Organized induction program productions for a crowd of 4000+ students & faculty, managing a budget of INR 2,50,000</p>
+                    <p class="education-details" data-testid="position-details-governor-2">Secured Bronze medal in the Inter-IIT Social and Cultural Meet 2018 Roorkee, beating 23 other IITs and representing the music cup</p>
+                    <p class="education-details" data-testid="position-duration-governor">[March '22 - March '23]</p>
+                </div>
             </div>
 
-            <div class="card" data-testid="pors-card">
-                <h3 class="education-title" data-testid="education-title-por's">POR's</h3>
-                <blockquote class="education-quote">
-                    <p data-testid="education-quote-por's">
-                        "Progress isn't about speed—it's about intention. Each task completed with purpose adds up to meaningful change."
+            <div class="card" data-testid="editor-card">
+                <h3 class="education-title" data-testid="position-title-editor">Editor | Founding Team | IIT Tech Ambit | Startup</h3>
+                <div class="education-content">
+                    <p class="education-details" data-testid="position-details-editor">Leveraging the brand name of IIT to build the first benchmark tech-review company for India; author of the Tech Gospel Column</p>
+                    <p class="education-details" data-testid="position-details-editor-2">Collectively raised INR 12,00,000 seed fund for the product from Sponsored Research and Serial Industrial Consultancy, IIT Kharagpur</p>
+                    <p class="education-details" data-testid="position-details-editor-3">Consolidated a 19,000+ user base (web app) and 2000+ social media subscribers for content delivery and consumer interaction</p>
+                    <p class="education-details" data-testid="position-duration-editor">[April '19 - March '20]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteering Section -->
+        <section class="section" data-testid="volunteering-section">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="volunteering-heading">Volunteering Experience</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="card" data-testid="srot-card">
+                <h3 class="education-title" data-testid="volunteering-title-srot">SROT - Himachal Pradesh</h3>
+                <div class="volunteering-content">
+                    <p class="volunteering-description" data-testid="volunteering-description-srot">
+                        Contributed to meaningful community development initiatives in the beautiful hills of Himachal Pradesh.
                     </p>
-                </blockquote>
+                    <div class="image-gallery">
+                        <div class="image-placeholder" data-testid="srot-image-1">
+                            Image 1 - SROT Activity
+                        </div>
+                        <div class="image-placeholder" data-testid="srot-image-2">
+                            Image 2 - SROT Activity
+                        </div>
+                        <div class="image-placeholder" data-testid="srot-image-3">
+                            Image 3 - SROT Activity
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
