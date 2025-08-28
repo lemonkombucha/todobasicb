@@ -313,6 +313,42 @@
             background: rgba(22, 163, 74, 0.05);
         }
 
+        /* YouTube Video Styling */
+        .youtube-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .youtube-video {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .youtube-video:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .youtube-video iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+
+        /* Alternate Card Styling for Variety */
+        .card-alternate {
+            background: linear-gradient(135deg, var(--card) 0%, rgba(22, 163, 74, 0.02) 100%);
+            border-left: 4px solid var(--accent);
+        }
+
+        .card-volunteering {
+            background: linear-gradient(135deg, rgba(22, 163, 74, 0.05) 0%, var(--card) 100%);
+            border: 2px solid rgba(22, 163, 74, 0.1);
+        }
+
         /* Contact Section */
         .contact-section {
             text-align: center;
@@ -439,7 +475,7 @@
     <div class="container">
         <!-- Header Section -->
         <header class="header">
-            <img src="profile-photo.jpg" alt="Arya's profile photo" class="profile-photo" data-testid="profile-photo">
+            <img src="AJ2.jpeg" alt="Arya's profile photo" class="profile-photo" data-testid="profile-photo">
             <h1 class="main-heading" data-testid="main-heading">
                 Hello, I am <span class="name">Arya</span>
             </h1>
@@ -541,23 +577,6 @@
             </div>
         </section>
 
-        <!-- Awards and Achievements Section -->
-        <section class="section" data-testid="awards-section">
-            <div class="section-header">
-                <h2 class="section-title" data-testid="awards-heading">Awards and Achievements</h2>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="card" data-testid="hudco-award-card">
-                <h3 class="education-title" data-testid="award-title-hudco">HUDCO Awards 2022 | Ministry of Housing and Urban Affairs | First Position</h3>
-                <div class="education-content">
-                    <p class="education-details" data-testid="award-details-hudco">Raised funds from Sir Satya Sai and Tata Trust to successfully build 59 low-cost affordable houses at a budget of INR 3.54 Cr</p>
-                    <p class="education-details" data-testid="award-details-hudco-2">Orchestrated rehabilitation of 240+ residents affected in 2018 Kerala Floods; secured first by winning against 53+ national firms</p>
-                    <p class="education-details" data-testid="award-duration-hudco">[Jan '22]</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Positions of Responsibilities Section -->
         <section class="section" data-testid="positions-section">
             <div class="section-header">
@@ -565,12 +584,27 @@
                 <div class="section-divider"></div>
             </div>
             
-            <div class="card" data-testid="governor-card">
+            <div class="card card-alternate" data-testid="governor-card">
                 <h3 class="education-title" data-testid="position-title-governor">Governor | Western Technology Music Society | IIT Kharagpur</h3>
                 <div class="education-content">
                     <p class="education-details" data-testid="position-details-governor">Organized induction program productions for a crowd of 4000+ students & faculty, managing a budget of INR 2,50,000</p>
                     <p class="education-details" data-testid="position-details-governor-2">Secured Bronze medal in the Inter-IIT Social and Cultural Meet 2018 Roorkee, beating 23 other IITs and representing the music cup</p>
                     <p class="education-details" data-testid="position-duration-governor">[March '22 - March '23]</p>
+                    
+                    <div class="youtube-gallery">
+                        <div class="youtube-video" data-testid="youtube-video-1">
+                            <iframe src="https://www.youtube.com/watch?v=W3eC7fKeKL0&list=PLqi6HyR-8dR8CqIFuYTWhQx8dgAJTzFcd&index=4" title="H.E.R- Hard Place" allowfullscreen></iframe>
+                        </div>
+                        <div class="youtube-video" data-testid="youtube-video-2">
+                            <iframe src="https://www.youtube.com/watch?v=a1QSdBoA2cU" title="Break- WTMS" allowfullscreen></iframe>
+                        </div>
+                        <div class="youtube-video" data-testid="youtube-video-3">
+                            <iframe src="https://www.youtube.com/watch?v=DjLN8c_I0vY&list=PLqi6HyR-8dR935c4uaHRHmBnCJt8BcTpd" title="Solo Performance" allowfullscreen></iframe>
+                        </div>
+                        <div class="youtube-video" data-testid="youtube-video-4">
+                            <iframe src="https://www.youtube.com/watch?v=svOqFiCyPmE" title="Dua ETMS" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -592,21 +626,21 @@
                 <div class="section-divider"></div>
             </div>
             
-            <div class="card" data-testid="srot-card">
-                <h3 class="education-title" data-testid="volunteering-title-srot">SROT - Himachal Pradesh</h3>
+            <div class="card card-volunteering" data-testid="srot-card">
+                <h3 class="education-title" data-testid="volunteering-title-srot">🌱 SROT - Himachal Pradesh</h3>
                 <div class="volunteering-content">
                     <p class="volunteering-description" data-testid="volunteering-description-srot">
                         Contributed to meaningful community development initiatives in the beautiful hills of Himachal Pradesh.
                     </p>
                     <div class="image-gallery">
                         <div class="image-placeholder" data-testid="srot-image-1">
-                            Image 1 - SROT Activity
+                            📸 Image 1 - SROT Activity
                         </div>
                         <div class="image-placeholder" data-testid="srot-image-2">
-                            Image 2 - SROT Activity
+                            📸 Image 2 - SROT Activity
                         </div>
                         <div class="image-placeholder" data-testid="srot-image-3">
-                            Image 3 - SROT Activity
+                            📸 Image 3 - SROT Activity
                         </div>
                     </div>
                 </div>
