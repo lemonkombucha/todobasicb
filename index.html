@@ -11,6 +11,14 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            .image-gallery img {
+  width: 250px;       /* fixed width */
+  height: 180px;      /* fixed height */
+  object-fit: cover;  /* crops images instead of stretching */
+  margin: 8px;        /* spacing between images */
+  border-radius: 10px; /* optional, rounded corners */
+}
+
         }
 
         :root {
