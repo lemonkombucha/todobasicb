@@ -7,22 +7,17 @@
     <meta name="description" content="Arya's personal portfolio - Architect by degree, ex-consultant currently in product, trained in Bharatnatyam and Carnatic music">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-       * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Srot images */
-.image-gallery img {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            .image-gallery img {
   width: 250px;       /* fixed width */
   height: 180px;      /* fixed height */
   object-fit: cover;  /* crops images instead of stretching */
   margin: 8px;        /* spacing between images */
-  border-radius: 10px; /* optional rounded corners */
+  border-radius: 10px; /* optional, rounded corners */
 }
-
-/* Instagram embeds */
 .insta-gallery {
   display: flex;
   flex-wrap: wrap;        /* stack on small screens */
@@ -36,7 +31,7 @@
   max-width: 500px;       /* don’t let them get too wide */
 }
 
-
+        }
 
         :root {
             --background: #fafafa;
@@ -505,7 +500,8 @@
                 Hello, I am <span class="name">Arya</span>
             </h1>
             <p class="intro-text" data-testid="intro-text">
-               Product Management | Management Consulting | Architecture | Music 
+                I am an Architect by degree, ex-consultant currently in product. I am also trained in 
+                Bharatnatyam and Carnatic music for over 14 years.
             </p>
         </header>
 
@@ -535,7 +531,7 @@
                         <span class="experience-icon" data-testid="icon-sprinklr-1">🛠️</span>
                         <div class="experience-content">
                             <h4 data-testid="title-sprinklr-1">WhatsApp Flows</h4>
-                            <p data-testid="description-sprinklr-1">Product Owner of WhatsApp Flows (a Meta product); managing enhancements and implementation for 3 legacy clients- HDFC, L’Oreal and Cartier</p>
+                            <p data-testid="description-sprinklr-1">Product Owner of WhatsApp Flows (a Meta product)</p>
                         </div>
                     </div>
                     
@@ -543,7 +539,7 @@
                         <span class="experience-icon" data-testid="icon-sprinklr-2">🌱</span>
                         <div class="experience-content">
                             <h4 data-testid="title-sprinklr-2">TikTok Shop</h4>
-                            <p data-testid="description-sprinklr-2">Currently leading TikTok Shop integrations to drive in-chat conversational commerce</p>
+                            <p data-testid="description-sprinklr-2">Currently leading TikTok Shop integrations to drive sales</p>
                         </div>
                     </div>
                 </div>
@@ -559,20 +555,25 @@
                     <div class="experience-item">
                         <span class="experience-icon" data-testid="icon-kepler-cannon-0">🎯</span>
                         <div class="experience-content">
-                            <h4 data-testid="title-kepler-cannon-0">Analytical Project</h4>
-                            <p data-testid="description-kepler-cannon-0">Analysed customer data for a Fortune 500 payments bank, identifying revenue leakage risks & proposing retention strategies</p>
+                            <h4 data-testid="title-kepler-cannon-0">Business Messaging</h4>
+                            <p data-testid="description-kepler-cannon-0">End-to-End ownership of messaging integrations for WhatsApp, Facebook and WeChat</p>
                         </div>
                     </div>
                     
                     <div class="experience-item">
                         <span class="experience-icon" data-testid="icon-kepler-cannon-1">🛠️</span>
                         <div class="experience-content">
-                            <h4 data-testid="title-kepler-cannon-1">Strategy Projetcs</h4>
-                            <p data-testid="description-kepler-cannon-1">Designed a Buy-Now-Pay-Later GTM strategy for a Fortune 200 payments firm, identifying $50Bn market potential in LAC</p>
+                            <h4 data-testid="title-kepler-cannon-1">WhatsApp Flows</h4>
+                            <p data-testid="description-kepler-cannon-1">Product Owner of WhatsApp Flows (a Meta product)</p>
                         </div>
                     </div>
                     
-    
+                    <div class="experience-item">
+                        <span class="experience-icon" data-testid="icon-kepler-cannon-2">🌱</span>
+                        <div class="experience-content">
+                            <h4 data-testid="title-kepler-cannon-2">TikTok Shop</h4>
+                            <p data-testid="description-kepler-cannon-2">Currently leading TikTok Shop integrations to drive sales</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -588,9 +589,10 @@
             <div class="card" data-testid="iit-kharagpur-card">
                 <h3 class="education-title" data-testid="education-title-iit-kharagpur">Indian Institute of Technology, Kharagpur</h3>
                 <div class="education-content">
-                    <p class="education-degree" data-testid="education-degree">Bachelor of Architecture and Regional Planning | 2018- 2023</p>
+                    <p class="education-degree" data-testid="education-degree">Bachelor of Architecture and Regional Planning</p>
                     <p class="education-details" data-testid="education-details">Minor in Economics and Micro Specialization in Entrepreneurship and Innovation</p>
-                    <p class="education-gpa" data-testid="education-gpa">CGPA: 8.27/10</p> 
+                    <p class="education-gpa" data-testid="education-gpa">CGPA: 8.27/10</p>
+                    <p class="education-details" data-testid="education-duration">[Jun '18 - Jun '23]</p>
                 </div>
             </div>
         </section>
@@ -598,16 +600,16 @@
         <!-- Positions of Responsibilities Section -->
         <section class="section" data-testid="positions-section">
             <div class="section-header">
-                <h2 class="section-title" data-testid="positions-heading">Extra-Curriculars</h2>
+                <h2 class="section-title" data-testid="positions-heading">Positions of Responsibilities</h2>
                 <div class="section-divider"></div>
             </div>
             
             <div class="card card-alternate" data-testid="governor-card">
                 <h3 class="education-title" data-testid="position-title-governor">Governor | Western Technology Music Society | IIT Kharagpur</h3>
                 <div class="education-content">
-                    <p class="education-details" data-testid="position-details-governor">- Organized induction program productions for a crowd of 4000+ students & faculty, managing a budget of INR 2,50,000</p>
-                    <p class="education-details" data-testid="position-details-governor-2">- Secured Bronze medal in the Inter-IIT Social and Cultural Meet 2018 Roorkee, beating 23 other IITs and representing the music cup</p>
-                  
+                    <p class="education-details" data-testid="position-details-governor">Organized induction program productions for a crowd of 4000+ students & faculty, managing a budget of INR 2,50,000</p>
+                    <p class="education-details" data-testid="position-details-governor-2">Secured Bronze medal in the Inter-IIT Social and Cultural Meet 2018 Roorkee, beating 23 other IITs and representing the music cup</p>
+                    <p class="education-details" data-testid="position-duration-governor">[March '22 - March '23]</p>
                     
                     <div class="youtube-gallery">
                         <div class="youtube-video" data-testid="youtube-video-1">
@@ -627,12 +629,12 @@
             </div>
 
             <div class="card" data-testid="editor-card">
-                <h3 class="education-title" data-testid="position-title-editor">Editor | Founding Team | IIT Tech Ambit | Pan-IIT Magazine</h3>
+                <h3 class="education-title" data-testid="position-title-editor">Editor | Founding Team | IIT Tech Ambit | Startup</h3>
                 <div class="education-content">
-                    <p class="education-details" data-testid="position-details-editor">- Leveraging the brand name of IIT to build the first benchmark tech-review company for India; author of the Tech Gospel Column</p>
-                    <p class="education-details" data-testid="position-details-editor-2">- Collectively raised INR 12,00,000 seed fund for the product from Sponsored Research and Serial Industrial Consultancy, IIT Kharagpur</p>
-                    <p class="education-details" data-testid="position-details-editor-3">- Consolidated a 19,000+ user base (web app) and 2000+ social media subscribers for content delivery and consumer interaction</p>
-         
+                    <p class="education-details" data-testid="position-details-editor">Leveraging the brand name of IIT to build the first benchmark tech-review company for India; author of the Tech Gospel Column</p>
+                    <p class="education-details" data-testid="position-details-editor-2">Collectively raised INR 12,00,000 seed fund for the product from Sponsored Research and Serial Industrial Consultancy, IIT Kharagpur</p>
+                    <p class="education-details" data-testid="position-details-editor-3">Consolidated a 19,000+ user base (web app) and 2000+ social media subscribers for content delivery and consumer interaction</p>
+                    <p class="education-details" data-testid="position-duration-editor">[April '19 - March '20]</p>
                 </div>
             </div>
         </section>
@@ -648,7 +650,7 @@
                 <h3 class="education-title" data-testid="volunteering-title-srot">🌱 SROT - Himachal Pradesh</h3>
                 <div class="volunteering-content">
                     <p class="volunteering-description" data-testid="volunteering-description-srot">
-                        Taught high-school kids maths, science and english. Had the most fulfilling 3 weeks teaching kids, befriending strangers and staying in the beautiful hills of Himachal.
+                        Contributed to meaningful community development initiatives in the beautiful hills of Himachal Pradesh.
                     </p>
                     <div class="image-gallery">
                         <img src="kritika.jpeg" alt="SROT Activity 1" data-testid="srot-image-1" />
@@ -675,10 +677,10 @@
         <section class="contact-section" data-testid="contact-section">
             <h2 class="contact-title" data-testid="contact-heading">Get in touch</h2>
             <p class="contact-subtitle" data-testid="contact-subtitle">
-                Always up for a chat on tech, women in workplace, education, social impact, music and books :) 
+                Let's break down big ideas into manageable pieces
             </p>
             
-            <a href="mailto:aryajyothi17@gmail.com" class="contact-button" data-testid="contact-button">
+            <a href="mailto:arya@example.com" class="contact-button" data-testid="contact-button">
                 <span>Start a conversation</span>
                 <span class="arrow">⟢</span>
             </a>
@@ -686,7 +688,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p data-testid="footer-text"> Be sincere, not serious! </p>
+            <p data-testid="footer-text">Designed with intention, built with purpose</p>
         </footer>
     </div>
 
