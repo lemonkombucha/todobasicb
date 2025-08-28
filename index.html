@@ -8,30 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            .image-gallery img {
-  width: 250px;       /* fixed width */
-  height: 180px;      /* fixed height */
-  object-fit: cover;  /* crops images instead of stretching */
-  margin: 8px;        /* spacing between images */
-  border-radius: 10px; /* optional, rounded corners */
-}
-.insta-gallery {
-  display: flex;
-  flex-wrap: wrap;        /* stack on small screens */
-  gap: 20px;              /* space between posts */
-  justify-content: center; /* center them */
-  margin-top: 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .image-gallery img {
+        width: 250px;
+        height: 180px;
+        object-fit: cover;
+        margin: 8px;
+        border-radius: 10px;
+    }
+    .insta-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .insta-gallery .gallery-item {
+        flex: 1 1 45%;
+        max-width: 500px;
+    }
 }
 
-.insta-gallery .gallery-item {
-  flex: 1 1 45%;          /* ~half width each on desktop */
-  max-width: 500px;       /* don’t let them get too wide */
-}
-
-        }
 
         :root {
             --background: #fafafa;
