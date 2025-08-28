@@ -12,6 +12,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         :root {
             --background: #fafafa;
             --foreground: #1a1a1a;
@@ -24,6 +25,7 @@
             --accent: #16a34a;
             --accent-foreground: #ffffff;
         }
+
         @media (prefers-color-scheme: dark) {
             :root {
                 --background: #0a0a0a;
@@ -34,6 +36,7 @@
                 --border: #262626;
             }
         }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background-color: var(--background);
@@ -41,9 +44,11 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         .container {
             max-width: 64rem;
             margin: 0 auto;
@@ -51,47 +56,56 @@
             padding-top: 4rem;
             padding-bottom: 4rem;
         }
+
         @media (min-width: 1024px) {
             .container {
                 padding-top: 6rem;
                 padding-bottom: 6rem;
             }
         }
+
         /* Animated Leaf */
-        <!-- Animated Orbital Spinner -->
-<div class="animated-spinner" id="animatedSpinner" aria-hidden="true" style="position: fixed; top: 2rem; right: 2rem; z-index: 50; width: 3rem; height: 3rem;">
-  <div style="width: 3rem; height: 3rem; border: 2px solid #6b7280; border-radius: 50%; position: relative; animation: spin 20s linear infinite;">
-    <div style="position: absolute; top: 50%; left: 50%; width: 0.5rem; height: 0.5rem; background: #6b7280; border-radius: 50%; transform: translate(-50%, -50%);"></div>
-    <div style="position: absolute; top: 1rem; left: 50%; width: 0.25rem; height: 0.75rem; background: #a1a1aa; transform: translateX(-50%);"></div>
-    <div style="position: absolute; bottom: 1rem; left: 50%; width: 0.25rem; height: 0.75rem; background: #a1a1aa; transform: translateX(-50%);"></div>
-    <div style="position: absolute; top: 50%; left: 0.5rem; width: 0.75rem; height: 0.25rem; background: #a1a1aa; transform: translateY(-50%);"></div>
-    <div style="position: absolute; top: 50%; right: 0.5rem; width: 0.75rem; height: 0.25rem; background: #a1a1aa; transform: translateY(-50%);"></div>
-  </div>
-</div>
-<style>
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-</style>
+        .animated-leaf {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 50;
+            animation: leaf-float 8s ease-in-out infinite;
+            transition: opacity 0.3s ease;
+        }
+
+        .animated-leaf.hidden {
+            opacity: 0;
+        }
+
+        .animated-leaf svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primary);
+            fill: currentColor;
+        }
+
+        @keyframes leaf-float {
+            0%, 100% {
+                transform: translateX(0px) translateY(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateX(15px) translateY(-10px) rotate(5deg);
+            }
+            50% {
+                transform: translateX(30px) translateY(0px) rotate(0deg);
+            }
+            75% {
+                transform: translateX(15px) translateY(10px) rotate(-5deg);
+            }
+        }
 
         /* Header */
         .header {
             margin-bottom: 8rem;
             animation: fade-in 0.8s ease-out forwards;
-            text-align: center;
         }
-        .profile-photo {
-            width: 12rem;
-            height: 12rem;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-            border: 3px solid var(--accent);
-            margin: 0 auto 2rem auto;
-            display: block;
-            background: var(--card);
-        }
+
         .main-heading {
             font-size: 3rem;
             font-weight: 300;
@@ -99,31 +113,36 @@
             margin-bottom: 2rem;
             letter-spacing: -0.025em;
         }
+
         @media (min-width: 1024px) {
             .main-heading {
                 font-size: 4.5rem;
             }
         }
+
         .main-heading .name {
             font-weight: 500;
         }
+
         .intro-text {
             font-size: 1.25rem;
             font-weight: 300;
             color: var(--muted-foreground);
             max-width: 48rem;
             line-height: 1.7;
-            margin: 0 auto;
         }
+
         @media (min-width: 1024px) {
             .intro-text {
                 font-size: 1.5rem;
             }
         }
+
         .accent-text {
             color: var(--accent);
             font-weight: 500;
         }
+
         /* Sections */
         .section {
             margin-bottom: 8rem;
@@ -131,26 +150,30 @@
             animation: fade-in 0.8s ease-out forwards;
             animation-play-state: paused;
         }
+
         .section-header {
             margin-bottom: 4rem;
         }
+
         .section-title {
             font-size: 2rem;
             font-weight: 500;
             margin-bottom: 1rem;
             letter-spacing: -0.025em;
         }
+
         @media (min-width: 1024px) {
             .section-title {
                 font-size: 2.25rem;
             }
         }
+
         .section-divider {
             height: 1px;
             width: 8rem;
             background: linear-gradient(to right, transparent, var(--border), transparent);
-            margin: 0 auto;
         }
+
         /* Cards */
         .card {
             background: var(--card);
@@ -160,55 +183,67 @@
             margin-bottom: 4rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         @media (min-width: 1024px) {
             .card {
                 padding: 3rem;
             }
         }
+
         .card:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+
         .card-header {
             margin-bottom: 2rem;
         }
+
         .company-name {
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 0.5rem;
         }
+
         .role {
             font-size: 1.125rem;
             color: var(--muted-foreground);
         }
+
         .card-content {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
+
         .experience-item {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
         }
+
         .experience-icon {
             font-size: 1.5rem;
             flex-shrink: 0;
         }
+
         .experience-content h4 {
             font-weight: 500;
             font-size: 1.125rem;
             margin-bottom: 0.5rem;
         }
+
         .experience-content p {
             color: var(--muted-foreground);
         }
+
         /* Education Cards */
         .education-title {
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 1rem;
         }
+
         .education-quote {
             font-size: 1.125rem;
             color: var(--muted-foreground);
@@ -218,11 +253,13 @@
             border-left: 2px solid var(--accent);
             padding-left: 1.5rem;
         }
+
         @media (min-width: 1024px) {
             .education-quote {
                 font-size: 1.25rem;
             }
         }
+
         /* Contact Section */
         .contact-section {
             text-align: center;
@@ -230,17 +267,20 @@
             animation: fade-in 0.8s ease-out forwards;
             animation-play-state: paused;
         }
+
         .contact-title {
             font-size: 2.5rem;
             font-weight: 500;
             margin-bottom: 2rem;
             letter-spacing: -0.025em;
         }
+
         @media (min-width: 1024px) {
             .contact-title {
                 font-size: 3rem;
             }
         }
+
         .contact-subtitle {
             font-size: 1.25rem;
             color: var(--muted-foreground);
@@ -249,11 +289,13 @@
             margin: 0 auto 2rem;
             line-height: 1.7;
         }
+
         @media (min-width: 1024px) {
             .contact-subtitle {
                 font-size: 1.5rem;
             }
         }
+
         .contact-button {
             display: inline-flex;
             align-items: center;
@@ -269,21 +311,26 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
+
         @media (min-width: 1024px) {
             .contact-button {
                 font-size: 1.5rem;
             }
         }
+
         .contact-button:hover {
             background: var(--accent);
             color: var(--accent-foreground);
         }
+
         .contact-button .arrow {
             transition: transform 0.3s ease;
         }
+
         .contact-button:hover .arrow {
             transform: translateX(0.25rem);
         }
+
         /* Footer */
         .footer {
             margin-top: 8rem;
@@ -292,6 +339,7 @@
             text-align: center;
             color: var(--muted-foreground);
         }
+
         /* Animations */
         @keyframes fade-in {
             from {
@@ -303,6 +351,7 @@
                 transform: translateY(0);
             }
         }
+
         /* Responsive */
         @media (max-width: 768px) {
             .container {
@@ -310,34 +359,33 @@
                 padding-top: 2rem;
                 padding-bottom: 2rem;
             }
+            
             .header {
                 margin-bottom: 4rem;
             }
+            
             .section {
                 margin-bottom: 4rem;
             }
+            
             .animated-leaf {
                 top: 1rem;
                 right: 1rem;
-            }
-            .profile-photo {
-                width: 7.5rem;
-                height: 7.5rem;
             }
         }
     </style>
 </head>
 <body>
     <!-- Animated Leaf -->
-    <div class="animated-leaf" id="animatedLeaf" aria-hidden="true">
+    <div class="animated-leaf" id="animatedLeaf">
         <svg viewBox="0 0 24 24">
             <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
         </svg>
     </div>
+
     <div class="container">
         <!-- Header Section -->
         <header class="header">
-            <img src="AJ2.jpeg" alt="Arya Jyothi photo" class="profile-photo" />
             <h1 class="main-heading" data-testid="main-heading">
                 Hello, I am <span class="name">Arya</span>
             </h1>
@@ -346,17 +394,20 @@
                 <span class="accent-text">Bharatnatyam and Carnatic music</span> for over 14 years.
             </p>
         </header>
+
         <!-- Work Experience Section -->
         <section class="section" data-testid="work-experience-section">
             <div class="section-header">
                 <h2 class="section-title" data-testid="work-experience-heading">Work Experience</h2>
                 <div class="section-divider"></div>
             </div>
+            
             <div class="card" data-testid="sprinklr-card">
                 <div class="card-header">
                     <h3 class="company-name" data-testid="company-sprinklr">Sprinklr</h3>
                     <p class="role" data-testid="role-sprinklr">Senior Product Analyst</p>
                 </div>
+                
                 <div class="card-content">
                     <div class="experience-item">
                         <span class="experience-icon" data-testid="icon-sprinklr-0">🎯</span>
@@ -365,6 +416,7 @@
                             <p data-testid="description-sprinklr-0">End-to-End ownership of messaging integrations for WhatsApp, Facebook and WeChat</p>
                         </div>
                     </div>
+                    
                     <div class="experience-item">
                         <span class="experience-icon" data-testid="icon-sprinklr-1">🛠️</span>
                         <div class="experience-content">
@@ -372,6 +424,7 @@
                             <p data-testid="description-sprinklr-1">Product Owner of WhatsApp Flows (a Meta product)</p>
                         </div>
                     </div>
+                    
                     <div class="experience-item">
                         <span class="experience-icon" data-testid="icon-sprinklr-2">🌱</span>
                         <div class="experience-content">
@@ -381,42 +434,48 @@
                     </div>
                 </div>
             </div>
+
             <div class="card" data-testid="kepler-cannon-card">
                 <div class="card-header">
                     <h3 class="company-name" data-testid="company-kepler-cannon">Kepler Cannon</h3>
                     <p class="role" data-testid="role-kepler-cannon">Associate Consultant</p>
                 </div>
+                
                 <div class="card-content">
                     <div class="experience-item">
-                        <span class="experience-icon" data-testid="icon-kepler-cannon-0">📊</span>
+                        <span class="experience-icon" data-testid="icon-kepler-cannon-0">🎯</span>
                         <div class="experience-content">
-                            <h4 data-testid="title-kepler-cannon-0">Data-driven Strategy</h4>
-                            <p data-testid="description-kepler-cannon-0">Developed pricing and market-entry strategies for Fortune 500 clients using advanced analytics.</p>
+                            <h4 data-testid="title-kepler-cannon-0">Business Messaging</h4>
+                            <p data-testid="description-kepler-cannon-0">End-to-End ownership of messaging integrations for WhatsApp, Facebook and WeChat</p>
                         </div>
                     </div>
+                    
                     <div class="experience-item">
-                        <span class="experience-icon" data-testid="icon-kepler-cannon-1">🤝</span>
+                        <span class="experience-icon" data-testid="icon-kepler-cannon-1">🛠️</span>
                         <div class="experience-content">
-                            <h4 data-testid="title-kepler-cannon-1">Client Engagement</h4>
-                            <p data-testid="description-kepler-cannon-1">Worked directly with senior stakeholders to define digital transformation roadmaps.</p>
+                            <h4 data-testid="title-kepler-cannon-1">WhatsApp Flows</h4>
+                            <p data-testid="description-kepler-cannon-1">Product Owner of WhatsApp Flows (a Meta product)</p>
                         </div>
                     </div>
+                    
                     <div class="experience-item">
-                        <span class="experience-icon" data-testid="icon-kepler-cannon-2">⚙️</span>
+                        <span class="experience-icon" data-testid="icon-kepler-cannon-2">🌱</span>
                         <div class="experience-content">
-                            <h4 data-testid="title-kepler-cannon-2">Operational Optimization</h4>
-                            <p data-testid="description-kepler-cannon-2">Redesigned workflows to improve efficiency, delivering 15–20% cost savings across projects.</p>
+                            <h4 data-testid="title-kepler-cannon-2">TikTok Shop</h4>
+                            <p data-testid="description-kepler-cannon-2">Currently leading TikTok Shop integrations to drive sales</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Academics Section -->
         <section class="section" data-testid="academics-section">
             <div class="section-header">
                 <h2 class="section-title" data-testid="academics-heading">Academics</h2>
                 <div class="section-divider"></div>
             </div>
+            
             <div class="card" data-testid="barch-card">
                 <h3 class="education-title" data-testid="education-title-b.arch-iit-kharagpur">B.Arch IIT Kharagpur</h3>
                 <blockquote class="education-quote">
@@ -425,6 +484,7 @@
                     </p>
                 </blockquote>
             </div>
+
             <div class="card" data-testid="pors-card">
                 <h3 class="education-title" data-testid="education-title-por's">POR's</h3>
                 <blockquote class="education-quote">
@@ -434,38 +494,45 @@
                 </blockquote>
             </div>
         </section>
+
         <!-- Contact Section -->
         <section class="contact-section" data-testid="contact-section">
             <h2 class="contact-title" data-testid="contact-heading">Get in touch</h2>
             <p class="contact-subtitle" data-testid="contact-subtitle">
                 Let's break down big ideas into manageable pieces
             </p>
-            <a href="mailto:aryajyothi17@gmail.com" class="contact-button" data-testid="contact-button">
+            
+            <a href="mailto:arya@example.com" class="contact-button" data-testid="contact-button">
                 <span>Start a conversation</span>
                 <span class="arrow">⟢</span>
             </a>
         </section>
+
         <!-- Footer -->
         <footer class="footer">
             <p data-testid="footer-text">Designed with intention, built with purpose</p>
         </footer>
     </div>
+
     <script>
         // Animated leaf visibility on scroll
         window.addEventListener('scroll', function() {
             const scrolled = window.scrollY;
             const leaf = document.getElementById('animatedLeaf');
+            
             if (scrolled > 100) {
                 leaf.classList.add('hidden');
             } else {
                 leaf.classList.remove('hidden');
             }
         });
+
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
         };
+
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -473,6 +540,7 @@
                 }
             });
         }, observerOptions);
+
         // Observe sections for scroll animations
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('.section, .contact-section');
